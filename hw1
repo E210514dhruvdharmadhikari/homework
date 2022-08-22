@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+
+class test{
+	public:
+	int s;
+	static int total_obj;
+	
+	test(){
+		total_obj++;
+		s = total_obj;
+	}
+	
+	void get_s(){
+		cout<<"this is object no. "<<s<<endl;
+	}
+};
+int test::total_obj;
+
+main(){
+	test ob1;
+	test ob2;
+	test ob3;
+	
+	ob1.get_s();
+	ob2.get_s();
+	ob3.get_s();
+}
